@@ -1,0 +1,146 @@
+<!--header role="banner" data-siteid="MLA" class="nav-header nav-header-plus">
+    <div class="nav-bounds nav-bounds-with-cart nav-bounds-with-cp">
+        <a class="nav-logo" href="//www.mercadolibre.com.ar" tabindex="2">Mercado Libre Argentina - Donde comprar y vender de todo</a>
+        <input type="text" class="nav-search-input" aria-label="Ingresá lo que quieras encontrar" name="as_word" placeholder="Buscar productos, marcas y más…" maxlength="120" autocapitalize="off" autocorrect="off" spellcheck="false" autocomplete="off" tabindex="3"
+            value="applw ipod" [(ngModel)]="textToSearch" required>
+        <button type="submit" class="nav-search-btn" tabindex="4" id="btnSearch" (click)="buttonClicked()">
+            <div role="img" aria-label="Buscar" class="nav-icon-search"></div></button>
+    </div>
+</header-->
+<!--style>
+    header {
+        height: 60px;
+        background-color: #fff159;
+        border: 0;
+        position: relative;
+        display: block;
+    }
+    
+    .nav-content {
+        height: auto;
+        max-width: 1200px;
+        padding: 0 0 0 160px;
+        position: relative;
+        margin: 0 auto;
+        display: block;
+    }
+    
+    .nav-input-search {
+        box-shadow: 0 1px 2px 0 rgb(0 0 0 / 20%);
+        padding: 7px 60px 9px 15px;
+        border-radius: 2px;
+        background-color: #fff;
+        border: 0 rgba(0, 0, 0, .2);
+        margin: 8px 1px;
+        width: 100%;
+    }
+    
+    .nav-icon1-search {
+        background-image: none;
+        height: 39px;
+        padding-top: 2px;
+        cursor: pointer;
+        left: auto;
+        border-radius: 0 2px 2px 0;
+        width: 46px;
+        border: 0 rgba(0, 0, 0, .2);
+        background-color: #fff;
+        top: 8px;
+        right: 1px;
+        position: absolute;
+        padding: 0;
+        content: '';
+        display: block;
+        border-left: 1px solid #e6e6e6;
+    }
+    
+    .img-search {
+        content: '\EA27';
+        vertical-align: top;
+        font-variant: normal;
+        margin: 0;
+        speak: none;
+        text-align: center;
+        width: 1em;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-family: navigation;
+        display: inline-block;
+    }
+</style>
+<header role="banner">
+    <div class="nav-content">
+        <a class="nav-logo" href="//www.mercadolibre.com.ar" tabindex="2">Mercado Libre Argentina - Donde comprar y vender de todo</a>
+        <input type="text" class="nav-input-search" aria-label="Ingresá lo que quieras encontrar" placeholder="Buscar productos, marcas y más…" maxlength="120" autocapitalize="off" autocorrect="off" spellcheck="false" autocomplete="off" tabindex="3" [(ngModel)]="textToSearch"
+            required>
+        <button type="submit" class="nav-icon1-search" tabindex="4" id="btnSearch" (click)="buttonClicked()">
+            <div role="img" aria-label="Buscar" class="img-search"></div>
+        </button>
+
+    </div>
+</header-->
+<div class="container">
+
+    <ol class="ui-search-layout ui-search-layout--stack">
+
+        <li class="ui-search-layout__item" *ngFor="let item of listProduct | slice:0:4;">
+            <div class="ui-search-result__wrapper">
+                <div class="andes-card andes-card--flat andes-card--default ui-search-result ui-search-result--core andes-card--padding-default">
+                    <div class="ui-search-result__image">
+                        <a href="" class="ui-search-link" title="iPod Touch 32 Gb &nbsp;">
+                            <div class="carousel-container arrow-visible">
+                                <div class="slick-initialized slick-slider">
+                                    <div role="presentation" class="slick-list">
+                                        <div class="slick-track" style="opacity: 1; transform: translate3d(0px, 0px, 0px); width: 480px;">
+                                            <div data-index="0" class="slick-slide slick-active" tabindex="-1" style="outline: none; width: 160px;">
+                                                <img width="160" height="160" src="{{item.image}}" class="ui-search-result-image__element" alt="iPod Touch 32 Gb &nbsp;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="ui-search-result__content-wrapper">
+                        <div class="ui-search-result__content-columns">
+                            <div class="ui-search-result__content-column ui-search-result__content-column--left">
+                                <div class="ui-search-item__group ui-search-item__group--price">
+                                    <div class="ui-search-price ui-search-price--size-medium ui-search-item__group__element">
+                                        <div class="ui-search-price__second-line"><span class="price-tag ui-search-price__part">
+                                            <span class="price-tag-symbol">$</span><span class="price-tag-fraction">{{item.price | number:'1.1-2':'es-Ar'}}</span></span>
+                                            <span class="ui-search-price__second-line__label"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--div class="ui-search-item__group ui-search-item__group--shipping ui-search-item__group--promise">
+                                    <div class="ui-search-item__group__element ui-search-item__group__element--shipping">
+                                        <p class="ui-search-item__promise ui-search-item__promise--next_day">
+                                            <span class="ui-search-item__promise__text ui-search-item__promise__text--last">Llega gratis mañana</span>
+                                        </p>
+                                    </div>
+                                </div-->
+                            </div>
+                        </div>
+                        <div class="ui-search-item__group ui-search-item__group--title">
+                            <a (click)="itemClick(item.id)" class="ui-search-item__group__element ui-search-link" title="{{item.title}}">
+                                <h2 class="ui-search-item__title">{{item.title}}&nbsp;</h2>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ol>
+</div>
+
+
+<!--table>
+    <tr *ngFor="let item of listProduct">
+        <td>{{item.title}}</td>
+        <td>{{item.location}}</td>
+        <td>{{item.price}}</td>
+    </tr>
+</table-->
+
+<div [innerHTML]="response | prettyjson"></div>

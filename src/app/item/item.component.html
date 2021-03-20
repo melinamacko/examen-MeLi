@@ -1,0 +1,103 @@
+<div class="container">
+    <ol class="ui-search-layout ui-search-layout--stack">
+
+        <li class="ui-search-layout__item" *ngFor="let item of listProduct | slice:0:4;">
+            <div class="ui-search-result__wrapper">
+                <div class="andes-card andes-card--flat andes-card--default ui-search-result ui-search-result--core andes-card--padding-default">
+                    <div class="ui-search-result__image">
+                        <a href="" class="ui-search-link" title="iPod Touch 32 Gb &nbsp;">
+                            <div class="carousel-container arrow-visible">
+                                <div class="slick-initialized slick-slider">
+                                    <div role="presentation" class="slick-list">
+                                        <div class="slick-track" style="opacity: 1; transform: translate3d(0px, 0px, 0px); width: 480px;">
+                                            <div data-index="0" class="slick-slide slick-active" tabindex="-1" style="outline: none; width: 160px;">
+                                                <img width="160" height="160" src="{{item.image}}" class="ui-search-result-image__element" alt="iPod Touch 32 Gb &nbsp;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="ui-search-result__content-wrapper">
+                        <div class="ui-search-result__content-columns">
+                            <div class="ui-search-result__content-column ui-search-result__content-column--left">
+                                <div class="ui-search-item__group ui-search-item__group--price">
+                                    <div class="ui-search-price ui-search-price--size-medium ui-search-item__group__element">
+                                        <div class="ui-search-price__second-line"><span class="price-tag ui-search-price__part">
+                                            <span class="price-tag-symbol">$</span><span class="price-tag-fraction">{{item.price | number:'1.1-2':'es-Ar'}}</span></span>
+                                            <span class="ui-search-price__second-line__label"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--div class="ui-search-item__group ui-search-item__group--shipping ui-search-item__group--promise">
+                                    <div class="ui-search-item__group__element ui-search-item__group__element--shipping">
+                                        <p class="ui-search-item__promise ui-search-item__promise--next_day">
+                                            <span class="ui-search-item__promise__text ui-search-item__promise__text--last">Llega gratis mañana</span>
+                                        </p>
+                                    </div>
+                                </div-->
+                            </div>
+                        </div>
+                        <div class="ui-search-item__group ui-search-item__group--title">
+                            <a (click)="itemClick(item.id)" class="ui-search-item__group__element ui-search-link" title="{{item.title}}">
+                                <h2 class="ui-search-item__title">{{item.title}}&nbsp;</h2>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ol>
+</div>
+<div class="ui-pdp">
+    <div class="ui-pdp-container ui-pdp-container--pdp">
+        <div class="ui-pdp-container__row ui-pdp--relative ui-pdp-with--separator--fluid pb-40">
+            <div class="ui-pdp-container__col col-3 pb-40">
+                <div class="ui-pdp-container__row ui-pdp-with--separator--fluid ui-pdp-with--separator--40">
+                    <div class="ui-pdp-container__col row">
+                        <div class="ui-pdp-gallery col-md-4">
+                            <div class="ui-pdp-gallery__column">
+                                <span class="ui-pdp-gallery__wrapper">
+                                    <figure class="ui-pdp-gallery__figure"></figure>
+                                    <img class="ui-pdp-image ui-pdp-gallery__figure__image" alt="{{item.title}}" src="{{item.image}}">
+                                </span>
+                            </div>
+                        </div>
+                        <div class="ui-pdp-container__col col-md-8 col-2 mr-32">
+                            <div class="ui-pdp-container__top-wrapper mt-40">
+                                <div class="ui-pdp-header">
+                                    <div class="ui-pdp-header__subtitle">
+                                        <span class="ui-pdp-subtitle">{{item.warranty}}</span>
+                                    </div>
+                                    <div class="ui-pdp-header__title-container">
+                                        <h1 class="ui-pdp-title">{{item.title}}</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ui-pdp-price mt-16 ui-pdp-price--size-large" style="width: 100%;">
+                                <div class="andes-tooltip__trigger">
+                                    <div class="ui-pdp-price__second-line">
+                                        <span class="price-tag ui-pdp-price__part">
+                                            <span class="price-tag-symbol" itemprop="priceCurrency">$</span>
+                                        <span class="price-tag-fraction">49.779</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="andes-button andes-button--loud" style="margin-top: 20px;"><span class="andes-button__content">Comprar ahora</span></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-pdp-container__row">
+                    <div class="ui-pdp-container__col col-1 ui-pdp-with--separator ui-pdp-with--separator--40">
+                        <div class="ui-pdp-description pl-45 pr-45 ui-pdp-collapsable--is-collapsed">
+                            <h2 class="ui-pdp-description__title">Descripción</h2>
+                            <p class="ui-pdp-description__content">{{item.description}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
