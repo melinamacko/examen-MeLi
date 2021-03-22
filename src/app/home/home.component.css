@@ -2926,3 +2926,14 @@ nav#nav-header-menu a.option-help {
         margin-top: 64px
     }
 }
+
+.slick-track {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+    width: 480px;
+}
+
+.slick-active {
+    outline: none;
+    width: 160px;
+}

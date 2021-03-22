@@ -19308,5 +19308,24 @@ html {
     margin-right: 0
 }
 
+.slick-track {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+    width: 480px;
+}
+
+.slick-active {
+    outline: none;
+    width: 160px;
+}
+
+.andes-button {
+    margin-top: 20px;
+}
+
+.ui-pdp-price {
+    width: 100%;
+}
+
 
 /*# sourceMappingURL=pdp.desktop.07d62b80.css.map*/
