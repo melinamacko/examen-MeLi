@@ -1,8 +1,12 @@
+<span [innerHTML]=response></span>
+
+
 <div class="container">
 
     <ol class="ui-search-layout ui-search-layout--stack">
 
         <li class="ui-search-layout__item" *ngFor="let item of listProduct | slice:0:4;">
+
             <div class="ui-search-result__wrapper">
                 <div class="andes-card andes-card--flat andes-card--default ui-search-result ui-search-result--core andes-card--padding-default">
                     <div class="ui-search-result__image">
@@ -45,5 +49,3 @@
         </li>
     </ol>
 </div>
-
-<div [innerHTML]="response | prettyjson"></div>
